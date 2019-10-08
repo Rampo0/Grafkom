@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Multiple Simultaneous Shader Programs</title>
-    <meta name="author" content="David W Parker">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KELAS</title>
   </head>
-
   <body>
-    <canvas id="glcanvas">
-      Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
-    </canvas>
+    <canvas id="glcanvas" width="640" height="640"
+      >Browser anda tidak mendukung html5
+      </canvas>
 
-    <!-- Shaders -->
-    <script name="shader" data-src="shaders/vertex1.glsl" data-type="vertex" data-version="v1"></script>
-    <script name="shader" data-src="shaders/fragment1.glsl" data-type="fragment" data-version="v1"></script>
-    <script name="shader" data-src="shaders/vertex2.glsl" data-type="vertex" data-version="v2"></script>
-    <script name="shader" data-src="shaders/fragment2.glsl" data-type="fragment" data-version="v2"></script>
+      <script name="shader" data-src="shaders/vertex.glsl" data-type="vertex" data-version="v1"></script>
+      <script name="shader" data-src="shaders/fragment.glsl" data-type="fragment" data-version="v1"></script>
+      
+       <!-- <script name="shader" data-type="fragment" data-version="v1" type="x-shader">
+       void main(){
+           gl_FragColor = vec4(1.0 , 0.0 , 0.0 , 1.0);
+       }
+     </script>
+      <script name="shader" data-type="vertex" data-version="v1" type="x-shader">
+        void main(){
+          gl_Position = vec4(0.0 , 0.0 , 0.0 , 1.0);
+          gl_PointSize = 10.0;
+        }
+      </script> -->
 
-    <!-- Library: Signals processing used for dispatching methods -->
-    <script type="text/javascript" src="js/libs/signals.js"></script>
+      <script type="text/javascript" src="js/libs/signals.js"></script>
+      <script type="text/javascript" src="js/libs/glUtils.js"></script>
 
-    <!-- Library: our common libraries -->
-    <script type="text/javascript" src="js/libs/glUtils.js"></script>
-    <script type="text/javascript" src="js/libs/uiUtils.js"></script>
+      <script type="text/javascript" src="js/libs/glMatrixMin.js"></script>
+      
+      <script type="text/javascript" src="js/index.js"></script>
+      
 
-    <!-- This is the bulk of the actual WebGL stuff -->
-    <script type="text/javascript" src="js/multiple_shaders.js"></script>
   </body>
 </html>
